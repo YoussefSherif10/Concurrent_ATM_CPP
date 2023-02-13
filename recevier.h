@@ -10,6 +10,7 @@
 
 #include "messaging.h"
 #include "sender.h"
+#include "dispatcher.h"
 
 namespace messaging {
     class Recevier {
