@@ -13,6 +13,7 @@
 
 #include "messaging.h"
 #include "recevier.h"
+#include "templateDispatcher.h"
 
 namespace messaging {
     // the message for closing queue
@@ -63,7 +64,8 @@ namespace messaging {
         explicit Dispatcher(queue *q_): q(q_), chained(false) {}
 
         /**
-         * handle a specific type of message by the template dispatcher class
+         * handle a specific type of message by the template dispatcher class by passing the queue, the current
+         * dispatcher object and the handling function.
          * @tparam Message : type of message
          * @tparam Func : TemplateDispatcher method type
          * @param f : TemplateDispatcher method
